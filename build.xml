@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="SimpleCryptoLib" default="default" basedir=".">
+    <description>Builds, tests, and runs the project SimpleCryptoLib.</description>
+    <import file="nbproject/build-impl.xml"/>
+    <target name="-post-jar">
+        <jar destfile="dist/SimpleCryptoLibrary.jar">
+            <zipfileset src="dist/SimpleCryptoLib.jar" excludes="META-INF/*.SF"/>
+            <zipgroupfileset dir="dist/lib/." excludes="META-INF/*.SF"/>
+        </jar>
+    </target>
+</project>
