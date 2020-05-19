@@ -3,6 +3,7 @@ package crypto;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
+import java.util.Base64;
 
 public class Util {
 
@@ -17,6 +18,6 @@ public class Util {
 
     public static String getRandomString(int length) {
         byte[] randomBytes = getRandom(new byte[length]);
-        return new String(randomBytes, StandardCharsets.UTF_8);
+        return Base64.getEncoder().encodeToString(randomBytes);
     }
 }
